@@ -1,7 +1,6 @@
 /Dockerfile
 /log
 /app
-docker-compose.yml
 .idea
 .vscode/
 npm-debug.log
