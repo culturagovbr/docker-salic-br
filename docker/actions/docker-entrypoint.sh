@@ -24,7 +24,12 @@ if ! [ -d "/var/www/salic-br" ] || ! [ -d "/var/www/salic-br/application" ]; the
 
     ls -la /var/www/salic-br
 
-    echo "Complete! The application has been successfully copied to /var/www/salic-br"
+    echo "[ ****************** ] Complete! The application has been successfully copied to /var/www/salic-br"
+
+    cd /var/www/salic-br
+
+    echo [ ****************** ]" Installing composer dependencies."
+    composer install --prefer-source --no-interaction
 fi
 
 # X-Debug
