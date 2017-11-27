@@ -18,6 +18,9 @@ RUN apt-get update \
   && docker-php-ext-configure pgsql --with-pgsql=/usr/local/pgsql \
   && docker-php-ext-configure pdo_pgsql --with-pgsql \
   && docker-php-ext-install pgsql pdo_pgsql
+  && -sS https://getcomposer.org/installer | php \
+  && mv composer.phar /usr/local/bin/ \
+  && ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
 
 WORKDIR /var/www/
 
