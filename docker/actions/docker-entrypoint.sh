@@ -16,8 +16,6 @@ if ! [ -d "/var/www/salic-br" ] || ! [ -d "/var/www/salic-br/application" ]; the
  #    cp /tmp/salic-br -rT /var/www/salic-br
     cp /tmp/salic-br -R /var/www/
 
-    echo "[ ****************** ] Copying sample application configuration to real one"
-    cp /var/www/salic-br/application/configs/exemplo-application.ini /var/www/salic-br/application/configs/application.ini
 
     echo "[ ****************** ] Changing owner and group from the Project to 'www-data' "
     chown www-data:www-data -R /var/www/salic-br
@@ -31,6 +29,13 @@ if ! [ -d "/var/www/salic-br" ] || ! [ -d "/var/www/salic-br/application" ]; the
     echo [ ****************** ]" Installing composer dependencies."
     composer install --prefer-source --no-interaction
 fi
+
+
+if  ! [ -e "$/var/www/salic-br/$application.ini" ] || ! [ -e "$/var/www/salic-br/application/$application.ini" ] ; then
+    echo "[ ****************** ] Copying sample application configuration to real one"
+    cp /var/www/salic-br/application/configs/exemplo-application.ini /var/www/salic-br/application/configs/application.ini
+fi
+
 
 # X-Debug
 
