@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: ./docker
-    image: culturagovbr/salic-br:1.7
+    image: culturagovbr/salic-br:1.7.1
     container_name: salic-br
     ports:
      - "80:80"
