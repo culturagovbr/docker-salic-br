@@ -31,7 +31,7 @@ if ! [ -d "/var/www/salic-br" ] || ! [ -d "/var/www/salic-br/application" ]; the
 fi
 
 
-if  ! [ -e "$/var/www/salic-br/$application.ini" ] || ! [ -e "$/var/www/salic-br/application/$application.ini" ] ; then
+if  ! [ -e "/var/www/salic-br/application/configs/application.ini" ] ; then
     echo "[ ****************** ] Copying sample application configuration to real one"
     cp /var/www/salic-br/application/configs/exemplo-application.ini /var/www/salic-br/application/configs/application.ini
 fi
