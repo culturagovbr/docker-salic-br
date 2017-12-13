@@ -20,9 +20,11 @@ Esse repositório tinha sido descontinuado mas de acordo com uma necessidade de 
 Para monitoramento do seu container, basta executar o comando abaixo:
    	
     docker exec -it salic-br bash -c "cd /tmp && wget 127.0.0.1/server-status -o server-status && cat server-status"		
-		
+
 ## Extra		
 	
 Caso seja necessário verificar algo dentro do seu container você poderá acessá-lo utilizando o comando abaixo:
 
     docker exec -it salic-br bash		
+
+
