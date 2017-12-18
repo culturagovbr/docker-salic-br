@@ -31,6 +31,7 @@ EXPOSE 9000
 
 COPY . /tmp/src
 RUN chmod +x -R /tmp/src/
+RUN usermod -u 1000 www-data 
 
 COPY ./actions/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
