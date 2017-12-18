@@ -17,8 +17,8 @@ if ! [ -d "/var/www/salic-br" ] || ! [ -d "/var/www/salic-br/application" ]; the
     cp /tmp/salic-br -R /var/www/
 
 
-    echo "[ ****************** ] Changing owner and group from the Project to 'www-data' "
-    chown www-data:www-data -R /var/www/salic-br
+    #echo "[ ****************** ] Changing owner and group from the Project to 'www-data' "
+    #chown www-data:www-data -R /var/www/salic-br
 
     ls -la /var/www/salic-br
 
